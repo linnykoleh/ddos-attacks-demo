@@ -1,0 +1,13 @@
+services:
+  web:
+    build: .
+    container_name: ubuntu-nginx-server
+    ports:
+      - "80:80"
+      - "443:443"
+      - "22:22"
+    networks:
+      - webnet
+
+networks:
+  webnet:
